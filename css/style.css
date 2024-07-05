@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Poppins-Bold'; /* Nombre que asignas a la fuente */
+    src: url('../font/Poppins/Poppins-Bold.ttf') format('truetype'),
+         url('../font/Poppins/Poppins-BlackItalic.ttf') format('truetype');
+    font-weight: bold; 
+    font-style: normal; 
+  }
+@font-face {
+    font-family: 'Poppins-Medium'; /* Nombre que asignas a la fuente */
+    src: url('../font/Poppins/Poppins-Medium.ttf') format('truetype'),
+         url('../font/Poppins/Poppins-MediumItalic.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+  }
+@font-face {
+    font-family: 'Poppins-Regular'; /* Nombre que asignas a la fuente */
+    src: url('../font/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face {
+    font-family: 'Poppins-Light'; /* Nombre que asignas a la fuente */
+    src: url('../font/Poppins/Poppins-Light.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: poppins-medium;
+}
+
+.ctn-cuerpo{
+    width:100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.cabecera{
+    background-color: rgb(54, 54, 54);
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+.cabecera img{
+    height: 100%;
+}
+
+
+/*TABLA*/
+.ctn-tabla-votos{
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    max-width: 1920px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.ctn-tabla{
+    max-width: 800px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+    text-align: left;
+    color: white;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: gray;
+    /* font-family: poppins-bold; */
+    color: white;
+}
+.vote-button{
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+button:disabled {
+    border-radius: 8px;
+    color: white;
+    cursor: not-allowed;
+}
+td:nth-child(2), th:nth-child(2),
+td:nth-child(3), th:nth-child(3) {
+    text-align: center; /* Centramos el contenido de estas celdas */
+}
+/*TABLA*/
+
+/* LATERALES */
+.ctn-lateral-img{
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ctn-lateral-img img{
+    height: 100%;
+}
+.side-right{
+    right: -100%;
+}
+.side-left{
+    left: -100%;
+}
+/* FIN DE LATERALES */
+
+/* BARRA */
+.vote-bar {
+    display: none; /* Barra oculta inicialmente */
+    position: relative;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px; 
+    /* margin-top: 5px; */
+}
+.vote-bar-fill {
+    background-color: #4A90E2; /* Color de la barra de porcentaje */
+    height: 100%;
+    transition: width 0.3s;
+}
+.vote-bar-text {
+    font-family: poppins-bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(66, 66, 66);
+    
+    font-size: 14px;
+}
